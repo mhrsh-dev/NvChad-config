@@ -13,6 +13,7 @@ return {
     config = function()
       require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
+      require "lspconfig".bashls.setup{}
     end,
   },
   {
@@ -22,6 +23,8 @@ return {
   			"lua-language-server", "stylua",
   			"html-lsp", "css-lsp" , "prettier",
         "debugpy", "pyright", "ruff",
+        "C", "clangd",
+        "bash-language-server"
   		},
   	},
   },
@@ -30,7 +33,9 @@ return {
   	opts = {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-        "html", "css"
+        "html", "css",
+        "c", "cpp",
+        "bash"
   		},
   	},
   },
